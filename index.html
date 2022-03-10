@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styles.css" />
+  <title>Карточки | Проект 1</title>
+</head>
+<body>
+<div class="container">
+  <div
+      class="slide"
+      style="background-image: url('https://i.pinimg.com/originals/1c/2a/4f/1c2a4f1cd72f65b7e393e0b49626b9e3.jpg');"
+  >
+    <h3>Neuschwanstein Castle</h3>
+  </div>
+  <div
+      class="slide"
+      style="
+          background-image: url('https://i.pinimg.com/originals/5a/a1/fe/5aa1fe17a4930f23dbcfa98f603de8fd.jpg');
+        "
+  >
+    <h3>Montmartre Paris</h3>
+  </div>
+  <div
+      class="slide"
+      style="
+          background-image: url('https://i.pinimg.com/originals/87/6c/81/876c816652544c1cdf09b101a335b1b2.png');
+        "
+  >
+    <h3>Rainy street</h3>
+  </div>
+  <div
+      class="slide"
+      style="
+          background-image: url('https://i.pinimg.com/736x/7e/12/75/7e1275215d2282c9aba4a5dee59d7465.jpg');
+        "
+  >
+    <h3>Architecture Photo</h3>
+  </div>
+  <div
+      class="slide"
+      style="
+          background-image: url('https://i.pinimg.com/originals/b1/d4/09/b1d4098fecfb947615c4ed95c7c46013.jpg');
+        "
+  >
+    <h3>Mesmerizing Skyscrapers In Hong Kong</h3>
+  </div>
+</div>
+<script>
+  let activeSlide = false;
+  document.querySelectorAll('.slide').forEach(element => {
+    element.onclick = event => {
+      if(activeSlide) {
+        activeSlide.classList.remove('active');
+      }
+      activeSlide = event.target;
+      activeSlide.classList.add('active');
+    }
+  })
+</script>
+</body>
+</html>
